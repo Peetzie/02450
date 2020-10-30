@@ -8,7 +8,7 @@ from scipy.io import loadmat
 # matlab variable names, and values to arrays representing matlab matrices.
 
 # Load Matlab data file to python dict structure
-iris_mat = loadmat('../Data/iris.mat', squeeze_me=True)
+iris_mat = loadmat('./Data/iris.mat', squeeze_me=True)
 # The argument squeeze_me ensures that there the variables we get from the 
 # MATLAB filed are not stored within "unneeded" array dimensions.
 
