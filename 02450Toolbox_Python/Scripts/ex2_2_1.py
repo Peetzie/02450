@@ -7,7 +7,7 @@ import numpy as np
 i = 0
 
 # Load Matlab data file to python dict structure
-mat_data = loadmat('../Data/zipdata.mat')
+mat_data = loadmat('./Data/zipdata.mat')
 
 # Extract variables of interest
 testdata = mat_data['testdata']

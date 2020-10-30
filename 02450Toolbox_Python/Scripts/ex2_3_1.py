@@ -11,7 +11,7 @@ import numpy as np
 K = [8,10,15,20,30,40,50,60,100,150]
 
 # Load Matlab data file and extract training set and test set
-mat_data = loadmat('../Data/zipdata.mat')
+mat_data = loadmat('./Data/zipdata.mat')
 X = mat_data['traindata'][:,1:]
 y = mat_data['traindata'][:,0]
 Xtest = mat_data['testdata'][:,1:]

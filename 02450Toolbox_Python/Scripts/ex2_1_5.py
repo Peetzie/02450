@@ -4,6 +4,7 @@
 from ex2_1_1 import *
 
 from scipy.linalg import svd
+import matplotlib.pyplot as plt
 
 Y = X - np.ones((N,1))*X.mean(0)
 U,S,Vh = svd(Y,full_matrices=False)

@@ -7,16 +7,16 @@ import scipy.linalg as linalg
 import numpy as np
 
 # Digits to include in analysis (to include all, n = range(10) )
-n = [0,1]
+n = [0]
 # Number of principal components for reconstruction
-K = 16
+K = 128
 # Digits to visualize
 nD = range(6);
 
 
 # Load Matlab data file to python dict structure
 # and extract variables of interest
-traindata = loadmat('../Data/zipdata.mat')['traindata']
+traindata = loadmat('./Data/zipdata.mat')['traindata']
 X = traindata[:,1:]
 y = traindata[:,0]
 
