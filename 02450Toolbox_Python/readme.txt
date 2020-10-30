@@ -14,12 +14,12 @@ Description of the datasets in the Data folder:
 body.mat
 This is a subset of the dataset on body dimenstions available at http://www.sci.usq.edu.au/courses/STA3301/resources/Data/ 
 and described in 
-G. Heinz, L. J. Peterson, R. W. Johnson, and C. J. Kerk, ï¿½Exploring relationships in body dimensions,ï¿½ Journal of Statistics Education, vol. 11, no. 2, 2003.
+G. Heinz, L. J. Peterson, R. W. Johnson, and C. J. Kerk, “Exploring relationships in body dimensions,” Journal of Statistics Education, vol. 11, no. 2, 2003.
 
 faithful.mat and faithful.txt
 Dataset on eruption of the Old Faithful geyser described in
-A. Azzalini and A. Bowman, ï¿½A look at some data on the old faithful geyser,ï¿½ Applied Statistics, pp. 357ï¿½365, 1990.
-W. Hï¿½rdle, Smoothing techniques: with implementation in S. Springer, 1991
+A. Azzalini and A. Bowman, “A look at some data on the old faithful geyser,” Applied Statistics, pp. 357–365, 1990.
+W. Härdle, Smoothing techniques: with implementation in S. Springer, 1991
 
 female.txt and male.txt
 Data is taken from http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/nlp/corpora/names/,
@@ -30,23 +30,23 @@ Fisher's Iris data, for a description see also http://en.wikipedia.org/wiki/Iris
 
 nanonose.xls
 This data has been taken from the nanonose project, see also http://www.nanonose.dk, it is described in 
-T. S. Alstrï¿½m, J. Larsen, C. H. Nielsen, and N. B. Larsen, ï¿½Data-driven modeling of nano-nose gas sensor arrays,ï¿½ in SPIE Defense, Security, and Sensing. International Society for Optics and Photonics, 2010, pp. 76 970Uï¿½76 970U.
+T. S. Alstrøm, J. Larsen, C. H. Nielsen, and N. B. Larsen, “Data-driven modeling of nano-nose gas sensor arrays,” in SPIE Defense, Security, and Sensing. International Society for Optics and Photonics, 2010, pp. 76 970U–76 970U.
 
 StopWords
 A txt file of list of common words provided in the TMG toolbox.
 
 textDocs.txt
 This example of documents for a term-document matrix is taken from 
-L. Eldï¿½n, Matrix Methods in Data Mining and Pattern Recognition. Philadelphia, PA, USA: Society for Industrial and Applied Mathematics, 2007.
+L. Eldén, Matrix Methods in Data Mining and Pattern Recognition. Philadelphia, PA, USA: Society for Industrial and Applied Mathematics, 2007.
 
 Wine.mat and Wine2.mat
-P. Cortez, A. Cerdeira, F. Almeida, T. Matos, and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547ï¿½553, 2009.
+P. Cortez, A. Cerdeira, F. Almeida, T. Matos, and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547–553, 2009.
 downloaded from http://archive.ics.uci.edu/ml/datasets/Wine+Quality
 Wine2 is same as Wine but with some outliers removed.
 
 zipdata.mat and digits.mat
 USPS handwritten digits availabe at http://www.cad.zju.edu.cn/home/dengcai/Data/MLData.html, see also
-J. J. Hull, ï¿½A database for handwritten text recognition research,ï¿½ Pattern Analysis and Machine Intelligence, IEEE Transactions on, vol. 16, no. 5, pp. 550ï¿½554,
+J. J. Hull, “A database for handwritten text recognition research,” Pattern Analysis and Machine Intelligence, IEEE Transactions on, vol. 16, no. 5, pp. 550–554,
 1994.
 
 wildfaces.mat and wildfaces_grayscale.mat
@@ -58,13 +58,3 @@ messy_data.data
 This dataset is an excerpt of the Auto MPG Data Set which has been heavily formatted to introduce comming data preprocessing isusues.
 Revised from CMU StatLib library, data concerns city-cycle fuel consumption https://archive.ics.uci.edu/ml/datasets/auto+mpg 
 This dataset was taken from the StatLib library which is maintained at Carnegie Mellon University. The dataset was used in the 1983 American Statistical Association Exposition.
-
-
-
-
-Packages needed:
-Pandas
-xlrd
-scikit-learn
-numpy
-matplotlib

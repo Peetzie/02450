@@ -8,7 +8,7 @@ import pandas as pd
 # We start by defining the path to the file that we're we need to load.
 # Upon inspection, we saw that the messy_data.data was infact a file in the
 # format of a CSV-file with a ".data" extention instead.  
-file_path = '02450Toolbox_Python\\02450Toolbox_Python\Data\messy_data\messy_data.data'
+file_path = '../Data/messy_data/messy_data.data'
 # First of we simply read the file in using readtable, however, we need to
 # tell the function that the file is tab-seperated. We also need to specify
 # that the header is in the second row:
@@ -63,7 +63,7 @@ messy_data.displacement = messy_data.displacement.replace({'0': np.nan})
 # If the modelling problem of interest was a classification problem where
 # we wanted to classify the origin attribute, we could now identify obtain
 # the data in the X,y-format as so:
-data = np.array(messy_data.to_numpy(), dtype=np.float64)
+data = np.array(messy_data.get_values(), dtype=np.float64)
 X_c = data[:, :-1].copy()
 y_c = data[:, -1].copy()
 

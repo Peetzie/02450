@@ -14,6 +14,7 @@ x[-1] # take the last element of x
 x[1::2] # return every other element of x starting from the 2nd
 
 # The length of x is 11; what is x[11] - and why?
+    # Index error sinze python is zero indexed. 
 
 # Inserting numbers into vectors is also easy. Using the same
 # definition of x and observe the results when typing
@@ -23,7 +24,10 @@ y[1::2]  = np.pi
 # that we index y with
 
 # You can also try:
-#y[1::2] = np.arange(2,12,2)
+y[1::2] = np.arange(2,12,2)
 
 # Observe the results when indexing the vector y with
-# y[1] and y[0]. Is y[0] defined? 
+y[1] 
+y[0] 
+#Is y[0] defined?  
+#Yes, we created it by inserting x previously.Which was the matrix.  
