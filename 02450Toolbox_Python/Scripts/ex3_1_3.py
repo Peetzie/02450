@@ -2,13 +2,13 @@
 from sklearn.feature_extraction.text import CountVectorizer
 
 # As before, load the corpus and preprocess:
-with open('../Data/textDocs.txt', 'r') as f:
+with open('./Data/textDocs.txt', 'r') as f:
     raw_file = f.read()
 corpus = raw_file.split('\n')
 corpus = list(filter(None, corpus))
 
 # Load and process the stop words in a similar manner:
-with open('../Data/stopWords.txt', 'r') as f:
+with open('./Data/stopWords.txt', 'r') as f:
     raw_file = f.read()
 stopwords = raw_file.split('\n')
 

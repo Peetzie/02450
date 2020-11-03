@@ -8,12 +8,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import PorterStemmer
 
 # Load and process the corpus and stop words:
-with open('../Data/textDocs.txt', 'r') as f:
+with open('./Data/textDocs.txt', 'r') as f:
     raw_file = f.read()
 corpus = raw_file.split('\n')
 corpus = list(filter(None, corpus))
 
-with open('../Data/stopWords.txt', 'r') as f:
+with open('./Data/stopWords.txt', 'r') as f:
     raw_file = f.read()
 stopwords = raw_file.split('\n')
 

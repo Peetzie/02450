@@ -45,9 +45,26 @@ def similarity(X, Y, method):
     elif method=='cos': # Cosine
         sim = (X*Y.T)/(np.sqrt(sum(np.power(X.T,2))).T * np.sqrt(sum(np.power(Y.T,2))))
     elif method=='cor': # Correlation
-        X_ = zscore(X,axis=1,ddof=1)
-        Y_ = zscore(Y,axis=1,ddof=1)
-        sim = (X_*Y_.T)/(M-1)
+        
+        #########***** New code *****#########
+        mX = np.mean(X,axis=1)
+        sX = np.std(X,axis=1,ddof=1)
+        X_tmp = (X-mX) / sX
+
+        mY = np.mean(Y,axis=1)
+        sY = np.std(Y,axis=1,ddof=1)
+        Y_tmp = (Y-mY) / sY
+        
+        sim = (X_tmp*Y_tmp.T)/(M-1)
+        #########***** New code *****#########
+        
+        
+        
+        #########***** Original code *****#########
+        # X_ = zscore(X,axis=1,ddof=1)
+        # Y_ = zscore(Y,axis=1,ddof=1)
+        # sim = (X_*Y_.T)/(M-1)
+        #########***** Original code *****#########
     return sim
         
 def binarize(X,Y=None):

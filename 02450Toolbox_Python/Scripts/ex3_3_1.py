@@ -9,11 +9,11 @@ from similarity import similarity
 i = 1
 
 # Similarity: 'SMC', 'Jaccard', 'ExtendedJaccard', 'Cosine', 'Correlation' 
-similarity_measure = 'SMC'
+similarity_measure = 'ExtendedJaccard'
 
 # Load the digits
 # Load Matlab data file to python dict structure
-X = loadmat('../Data/digits.mat')['X']
+X = loadmat('./Data/digits.mat')['X']
 # You can also try the CBCL faces dataset (remember to change 'transpose')
 #X = loadmat('../Data/wildfaces_grayscale.mat')['X']
 N, M = X.shape
