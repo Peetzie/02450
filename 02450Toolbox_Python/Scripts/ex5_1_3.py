@@ -34,7 +34,7 @@ if system() == 'Windows':
     # unzipped the software in!
     windows_graphviz_call(fname=fname,
                           cur_dir=getcwd(),
-                          path_to_graphviz=r'C:\Program Files (x86)\Graphviz2.38')
+                          path_to_graphviz=r'C:\Users\frede\Documents\02450\02450Toolbox_Python\Graphviz')
     plt.figure(figsize=(12,12))
     plt.imshow(imread(fname + '.png'))
     plt.box('off'); plt.axis('off')
