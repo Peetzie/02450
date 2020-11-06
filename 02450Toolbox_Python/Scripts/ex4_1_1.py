@@ -14,7 +14,7 @@ mu = 17
 s = 2
 
 # Number of bins in histogram
-nbins = 20
+nbins = 100
 
 # Generate samples from the Normal distribution
 X = np.random.normal(mu,s,N).T 

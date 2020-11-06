@@ -6,14 +6,14 @@ import numpy as np
 from scipy.io import loadmat
 
 # Digits to include in analysis (to include all, n = range(10) )
-n = [1]
+n = [3]
 
 # Number of digits to generate from normal distributions
-ngen = 10
+ngen = 50
 
 # Load Matlab data file to python dict structure
 # and extract variables of interest
-traindata = loadmat('../Data/zipdata.mat')['traindata']
+traindata = loadmat('./Data/zipdata.mat')['traindata']
 X = traindata[:,1:]
 y = traindata[:,0]
 N, M = np.shape(X) #or X.shape

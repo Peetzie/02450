@@ -5,7 +5,7 @@ import numpy as np
 from scipy import stats
 
 # Number of samples
-N = 500
+N = 50000
 
 # Mean
 mu = 17

@@ -7,11 +7,11 @@ from scipy.io import loadmat
 import numpy as np
 
 # Digits to include in analysis (to include all: n = range(10))
-n = [0]
+n = [7]
 
 # Load Matlab data file to python dict structure
 # and extract variables of interest
-traindata = loadmat('../Data/zipdata.mat')['traindata']
+traindata = loadmat('./Data/zipdata.mat')['traindata']
 X = traindata[:,1:]
 y = traindata[:,0]
 N, M = X.shape
