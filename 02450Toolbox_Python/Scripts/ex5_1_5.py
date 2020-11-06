@@ -3,7 +3,7 @@ import numpy as np
 from scipy.io import loadmat
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine.mat')
+mat_data = loadmat('./Data/wine.mat')
 X = mat_data['X']
 y = mat_data['y'].astype(int).squeeze()
 C = mat_data['C'][0,0]

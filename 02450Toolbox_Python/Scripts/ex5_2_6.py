@@ -6,7 +6,7 @@ import sklearn.linear_model as lm
 from ex5_1_5 import *
 
 # Fit logistic regression model
-model = lm.logistic.LogisticRegression()
+model = lm.LogisticRegression()
 model = model.fit(X,y)
 
 # Classify wine as White/Red (0/1) and assess probabilities

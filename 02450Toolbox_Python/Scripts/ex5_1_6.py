@@ -12,7 +12,7 @@ from ex5_1_5 import *
 
 # Fit regression tree classifier, Gini split criterion, no pruning
 criterion='gini'
-dtc = tree.DecisionTreeClassifier(criterion=criterion, min_samples_split=100)
+dtc = tree.DecisionTreeClassifier(criterion=criterion, min_samples_split=300)
 dtc = dtc.fit(X,y)
 
 fname='tree_' + criterion + '_wine_data'
@@ -31,7 +31,7 @@ if system() == 'Linux' or system() == 'Darwin':
 if system() == 'Windows':
     # N.B.: you have to update the path_to_graphviz to reflect the position you 
     # unzipped the software in!
-    path_to_graphviz = r'C:\Program Files (x86)\Graphviz2.38' # CHANGE THIS
+    path_to_graphviz = r'C:\Users\frede\Documents\02450\02450Toolbox_Python\Graphviz' # CHANGE THIS
     windows_graphviz_call(fname=fname,
                           cur_dir=getcwd(),
                           path_to_graphviz=path_to_graphviz)
