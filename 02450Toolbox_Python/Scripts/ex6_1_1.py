@@ -6,7 +6,7 @@ from sklearn import model_selection, tree
 import numpy as np
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine2.mat')
+mat_data = loadmat('./Data/wine2.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
 attributeNames = [name[0] for name in mat_data['attributeNames'][0]]
@@ -18,7 +18,7 @@ C = len(classNames)
 tc = np.arange(2, 21, 1)
 
 # Simple holdout-set crossvalidation
-test_proportion = 0.5
+test_proportion = 0.25
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X,y,test_size=test_proportion)
 
 # Initialize variables
