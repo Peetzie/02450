@@ -29,9 +29,11 @@ zA = np.abs(y_test - yhatA ) ** 2
 # compute confidence interval of model A
 alpha = 0.05
 CIA = st.t.interval(1-alpha, df=len(zA)-1, loc=np.mean(zA), scale=st.sem(zA))  # Confidence interval
-
+print(CIA) 
 # Compute confidence interval of z = zA-zB and p-value of Null hypothesis
 zB = np.abs(y_test - yhatB ) ** 2
 z = zA - zB
 CI = st.t.interval(1-alpha, len(z)-1, loc=np.mean(z), scale=st.sem(z))  # Confidence interval
+print(CIA)
 p = st.t.cdf( -np.abs( np.mean(z) )/st.sem(z), df=len(z)-1)  # p-value
+print(p)

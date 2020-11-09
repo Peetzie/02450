@@ -3,6 +3,8 @@ import numpy as np
 from scipy.io import loadmat
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import model_selection
+from collections import Counter
+import sklearn.tree
 
 # requires data from exercise 1.5.1
 from ex1_5_1 import *
@@ -35,13 +37,21 @@ for train_index, test_index in CV.split(X, y):
         y_est = knclassifier.predict(X_test)
 
         dy.append( y_est )
-        # errors[i,l-1] = np.sum(y_est[0]!=y_test[0])
+        #errors[i,l-1] = np.sum(y_est[0]!=y_test[0])
     dy = np.stack(dy, axis=1)
     yhat.append(dy)
     y_true.append(y_test)
     i+=1
 
+mB = sklearn.tree.DecisionTreeRegressor().fit(X_train, y_train)
+print(mB.fit)
 yhat = np.concatenate(yhat)
 y_true = np.concatenate(y_true)
 yhat[:,0] # predictions made by first classifier.
-# Compute accuracy here.
+
+modelA = np.sum((yhat[:,0] == y_true) == 1)
+modelB = np.sum((yhat[:,1] == y_true) == 1)
+modelC = np.sum((yhat[:,2] == y_true) == 1)
+print("Accuracy of Model A is: ", modelA/len(y_true))
+print("Accuracy of Model B is: ", modelB/len(y_true))
+print("Accuracy of Model C is: ", modelC/len(y_true))

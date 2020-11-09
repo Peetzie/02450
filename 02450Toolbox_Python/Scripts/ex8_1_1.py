@@ -8,7 +8,7 @@ import sklearn.linear_model as lm
 from sklearn import model_selection
 from toolbox_02450 import rlr_validate
 
-mat_data = loadmat('../Data/body.mat')
+mat_data = loadmat('./Data/body.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
 attributeNames = [name[0] for name in mat_data['attributeNames'][0]]
@@ -27,7 +27,6 @@ CV = model_selection.KFold(K, shuffle=True)
 
 # Values of lambda
 lambdas = np.power(10.,range(-5,9))
-
 # Initialize variables
 #T = len(lambdas)
 Error_train = np.empty((K,1))
@@ -108,9 +107,9 @@ for train_index, test_index in CV.split(X,y):
         grid()
     
     # To inspect the used indices, use these print statements
-    #print('Cross validation fold {0}/{1}:'.format(k+1,K))
-    #print('Train indices: {0}'.format(train_index))
-    #print('Test indices: {0}\n'.format(test_index))
+    print('Cross validation fold {0}/{1}:'.format(k+1,K))
+    print('Train indices: {0}'.format(train_index))
+    print('Test indices: {0}\n'.format(test_index))
 
     k+=1
 

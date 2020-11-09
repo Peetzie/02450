@@ -2,8 +2,8 @@
 import numpy as np
 
 # Load list of names from files
-fmale = open('../Data/male.txt','r')
-ffemale = open('../Data/female.txt','r')
+fmale = open('./Data/male.txt','r')
+ffemale = open('./Data/female.txt','r')
 mnames = fmale.readlines(); fnames = ffemale.readlines();
 names = mnames + fnames
 gender = [0]*len(mnames) + [1]*len(fnames)

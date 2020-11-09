@@ -7,7 +7,6 @@ x = np.array([6.9, 1.09, .06, 2.1, .0061, 12, 31, .99, 3.5, .44, 12]).reshape(1,
 
 # Evaluate the classification tree for the new data object
 x_class = dtc.predict(x)[0]
-
 # Print results
 print('\nNew object attributes:')
 for i in range(len(attributeNames)):
