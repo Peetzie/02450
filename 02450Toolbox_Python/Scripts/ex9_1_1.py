@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from toolbox_02450 import rocplot, confmatplot
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine2.mat')
+mat_data = loadmat('./Data/wine2.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
 attributeNames = [name[0] for name in mat_data['attributeNames'][0]]
@@ -18,7 +18,7 @@ C = len(classNames)
 
 # K-fold crossvalidation with stratified folds
 K = 2
-CV = StratifiedKFold(K, shuffle=True)
+CV = StratifiedKFold(K,shuffle=True)
 
 k=0
 for train_index, test_index in CV.split(X,y):
@@ -40,7 +40,17 @@ for train_index, test_index in CV.split(X,y):
     confmatplot(y_test,y_test_est)
 
     k+=2
-    
+from ex5_1_5 import *
+import sklearn.linear_model as lm
+
+# Fit logistic regression model
+model = lm.LogisticRegression()
+model = model.fit(X,y)
+
+# Classify wine as White/Red (0/1) and assess probabilities
+y_est = model.predict(X)
+ 
+
 show()    
 
 print('Ran Exercise 9.1.1')

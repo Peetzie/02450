@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from toolbox_02450 import rocplot, confmatplot
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/wine2.mat')
+mat_data = loadmat('./Data/wine2.mat')
 X = mat_data['X']
 y = mat_data['y'].squeeze()
 attributeNames = [name[0] for name in mat_data['attributeNames'][0]]
